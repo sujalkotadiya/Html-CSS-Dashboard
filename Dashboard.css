@@ -8,6 +8,12 @@
     src: url('./assets/Gilroy/Gilroy-Medium.ttf');
 }
 
+@font-face {
+    font-family: 'Gilroy-bold';
+    src: url('./assets/Gilroy/Gilroy-Bold.ttf');
+}
+
+
 * {
     padding: 0;
     margin: 0;
@@ -204,20 +210,20 @@
     padding-top: 5px;
 }
 
-.overview-title{
+.overview-title {
     padding: 10px;
     position: absolute;
     top: 125px;
 }
 
-.overview-title p{
+.overview-title p {
     font-size: 24px;
     line-height: 30px;
     font-family: 'Gilroy-semibold';
     color: white;
 }
 
-.card-main{
+.card-main {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -228,26 +234,26 @@
     gap: 20px;
 }
 
-.card{
-    width: 263px;
+.card {
+    width: 300px;
     height: 116px;
-    background: rgb(245,245,245);
-    box-shadow: 1px 1px 10px 1px rgba(128, 128, 128, 0.493) ;
+    background: rgb(245, 245, 245);
+    box-shadow: 1px 1px 10px 1px rgba(128, 128, 128, 0.493);
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
-    padding:  20px;
+    padding: 20px;
     position: relative;
     overflow: hidden;
 }
 
-.card div p:first-child{
+.card div p:first-child {
     font-size: 20px;
     line-height: 23.44px;
     font-family: 'Gilroy-semibold';
 }
 
-.card div p:nth-child(2){
+.card div p:nth-child(2) {
     font-family: 'Gilroy-regular';
     font-size: 16px;
     line-height: 18.75px;
@@ -255,36 +261,169 @@
     padding: 8px 0;
 }
 
-.overview-icons{
+.overview-icons {
     position: absolute;
     right: 15px;
-    bottom: -4px;
+    bottom: -2px;
     width: 47px;
     height: 47px;
 }
 
 
-@media (max-width:1400px){
-    .card-main{
-        justify-content: space-evenly;
+
+
+.project-table {
+    margin: 10px;
+    margin-top: 80px;
+    background: rgb(245, 245, 245);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.project-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.project-title {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Gilroy-semibold';
+    font-style: italic;
+}
+
+.create-btn {
+    background: rgba(28, 210, 173, 1);
+    border-radius: 10px;
+    width: 78px;
+    height: 40px;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    padding: 8px 12px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto; /* Table ke liye horizontal scroll allow karega */
+    margin: 0 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+
+table thead tr th {
+    border-bottom: 1px solid black;
+    text-align: start;
+    color: black;
+}
+
+.table-head-width{
+    min-width: 292px;
+    height: 52px;
+}
+
+tbody tr td:first-of-type{
+    font-family: 'Gilroy-semibold';
+}
+
+.table-width {
+    min-width: 292px;
+    height: 52px;
+    font-family: 'Gilroy-regular';
+    color: rgba(142, 144, 166, 1);
+}
+
+.last-td {
+    min-width: 235px;
+    height: 52px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.last-td p:first-of-type {
+    font-family: 'Gilroy-semibold';
+    color: rgba(142, 144, 166, 1);
+    min-width: 79px;
+}
+
+
+.p-btn1 {
+    background: rgba(229, 247, 251, 1);
+    color: rgba(24, 195, 217, 1);
+}
+
+.p-btn2 {
+    background: rgba(170, 170, 170, 0.2);
+    color: rgba(170, 170, 170, 1);
+}
+
+.p-btn3 {
+    background: rgba(28, 210, 173, 0.2);
+    color: rgba(28, 210, 173, 1);
+}
+
+.p-btn6 {
+    background: rgba(254, 219, 219, 1);
+    color: rgba(236, 74, 74, 1);
+}
+
+.p-btn {
+    width: 100px;
+    height: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 13px 60px;
+    font-family: 'Gilroy-bold';
+}
+
+@media (max-width:1525px) {
+    .card {
+        width: 260px;
     }
-    .card{
-        width:400px ;
+    .card-main {
+        justify-content: space-evenly;
     }
 }
 
-@media (max-width:810px){
+@media (max-width:1130px) {
+    .card {
+        width: 200px;
+    }
+}
+
+@media (max-width:880px) {
+    .card {
+        width: 300px;
+    }
+    .project-table{
+        margin-top: 220px;
+
+    }
+}
+
+@media (max-width:810px) {
     .sidebar {
         display: none;
     }
-    
+
     .menu-icon {
         display: block;
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    
+
     .nav-logo {
         display: block;
         height: 40px;
@@ -295,14 +434,22 @@
         border-radius: 3px;
         padding: 10px 10px;
     }
-    
+
     .nav-main {
         flex-direction: column;
         gap: 5px;
     }
-    .card-main{
+
+    .card-main {
         top: 70px;
     }
+}
+
+@media (max-width:639px){
+    .card{
+        width: 250px;
+    }
+    
 }
 
 @media (max-width:576px) {
@@ -311,16 +458,29 @@
         gap: 10px;
         padding-top: 10px;
     }
-    .right-side-nav{
+
+    .right-side-nav {
         justify-content: center;
     }
-    .overview-title{
+
+    .overview-title {
         top: 140px;
     }
-    .card-main{
+
+    .card-main {
         top: 20px;
     }
     .card{
+        width: 200px;
+    }
+}
+
+
+@media (max-width:439px) {
+    .card{
         width: 300px;
+    }
+    .project-table{
+        margin-top: 500px;
     }
 }
