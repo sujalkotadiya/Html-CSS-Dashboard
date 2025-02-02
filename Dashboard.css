@@ -12,7 +12,10 @@
     font-family: 'Gilroy-bold';
     src: url('./assets/Gilroy/Gilroy-Bold.ttf');
 }
-
+@font-face {
+    font-family: 'Gilroy-medium';
+    src: url('./assets/Gilroy/Gilroy-Medium.ttf');
+}
 
 * {
     padding: 0;
@@ -95,17 +98,16 @@
     padding: 10px;
 }
 
-
 .menu-logo {
     width: 18.7px;
     height: 18.7px;
 }
 
-
-
 .content {
     width: 100%;
     font-family: "Gilroy-regular";
+    overflow-y: auto;
+    height: 100vh;
 }
 
 .nav {
@@ -210,10 +212,14 @@
     padding-top: 5px;
 }
 
+.card-section {
+    position: relative;
+}
+
 .overview-title {
     padding: 10px;
     position: absolute;
-    top: 125px;
+    top: 30px;
 }
 
 .overview-title p {
@@ -238,7 +244,7 @@
     width: 300px;
     height: 116px;
     background: rgb(245, 245, 245);
-    box-shadow: 1px 1px 10px 1px rgba(128, 128, 128, 0.493);
+    box-shadow: 1px 1px 10px 1px rgba(128, 128, 128, 0.500);
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
@@ -269,15 +275,13 @@
     height: 47px;
 }
 
-
-
-
 .project-table {
     margin: 10px;
     margin-top: 80px;
     background: rgb(245, 245, 245);
     border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0.5px 0.5px 5px 0.5px rgba(128, 128, 128, 0.300);
 }
 
 .project-main {
@@ -308,7 +312,7 @@
 
 .table-container {
     width: 100%;
-    overflow-x: auto; /* Table ke liye horizontal scroll allow karega */
+    overflow-x: auto;
     margin: 0 30px;
 }
 
@@ -317,20 +321,18 @@ table {
     border-collapse: collapse;
 }
 
-
-
 table thead tr th {
     border-bottom: 1px solid black;
     text-align: start;
     color: black;
 }
 
-.table-head-width{
+.table-head-width {
     min-width: 292px;
     height: 52px;
 }
 
-tbody tr td:first-of-type{
+tbody tr td:first-of-type {
     font-family: 'Gilroy-semibold';
 }
 
@@ -354,7 +356,6 @@ tbody tr td:first-of-type{
     color: rgba(142, 144, 166, 1);
     min-width: 79px;
 }
-
 
 .p-btn1 {
     background: rgba(229, 247, 251, 1);
@@ -386,29 +387,130 @@ tbody tr td:first-of-type{
     padding: 13px 60px;
     font-family: 'Gilroy-bold';
 }
+.event-card {
+    max-width: 453px;
+    height: 332px;
+    border-radius: 16px;
+    background: rgb(245, 245, 245);
+    margin: 25px 0 20px 10px;
+    box-shadow: 0.5px 0.5px 5px 0.5px rgba(128, 128, 128, 0.300);
+    overflow: hidden;
+    width: 100%; /* Ensure the card width is responsive */
+}
+
+.event-title {
+    font-family: 'Gilroy-semibold';
+    font-style: italic;
+    padding: 22px 24px 15px  24px;
+}
+
+.details-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+.event-details {
+    display: flex;
+    gap: 10px;
+    height: 80px;
+    width: 405px;
+}
+
+.gray-dot {
+    height: 5px;
+    width: 5px;
+    border-radius: 100%;
+    background: rgba(199, 200, 217, 1);
+}
+
+.desc {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: rgba(142, 144, 166, 1);
+    font-family: "Gilroy-medium";
+}
+
+.event-btn {
+    background: rgba(30, 136, 229, 1);
+    padding: 4px 8px;
+    height: 26px;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "Gilroy-bold";
+    letter-spacing: 1px;
+}
+
+.name_btn {
+    height: 48px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.event-card-title {
+    font-family: "Gilroy-semibold";
+    font-size: 16px;
+}
+
+.blue-title {
+    color: rgba(30, 136, 229, 1);
+    font-size: 14px;
+}
+
+.today-color {
+    color: rgba(85, 87, 112, 1);
+    font-size: 14px;
+}
+.scroll::-webkit-scrollbar {
+    width: 6px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: rgba(128, 128, 128, 0.5);
+    border-radius: 10px;
+}
 
 @media (max-width:1525px) {
     .card {
         width: 260px;
     }
+
     .card-main {
         justify-content: space-evenly;
     }
 }
 
-@media (max-width:1130px) {
+@media (max-width:1360px){
+    .card{
+        width: 230px;
+    }
+}
+
+@media (max-width:1240px) {
     .card {
         width: 200px;
     }
 }
 
-@media (max-width:880px) {
-    .card {
+@media(max-width:1130px){
+    .card{
         width: 300px;
     }
-    .project-table{
+    .project-table {
         margin-top: 220px;
+    }
+}
 
+@media (max-width:880px) {
+    .card {
+        width:250px;
     }
 }
 
@@ -445,11 +547,11 @@ tbody tr td:first-of-type{
     }
 }
 
-@media (max-width:639px){
-    .card{
+@media (max-width:639px) {
+    .card {
         width: 250px;
     }
-    
+
 }
 
 @media (max-width:576px) {
@@ -470,17 +572,21 @@ tbody tr td:first-of-type{
     .card-main {
         top: 20px;
     }
-    .card{
+
+    .card {
         width: 200px;
     }
+    
 }
 
 
 @media (max-width:439px) {
-    .card{
+    .card {
         width: 300px;
     }
-    .project-table{
+
+    .project-table {
         margin-top: 500px;
     }
+   
 }
